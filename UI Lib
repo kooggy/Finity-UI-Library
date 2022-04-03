@@ -1,0 +1,45 @@
+if game.CoreGui:FindFirstChild("FinityUI") then
+    game.CoreGui["FinityUI"]:Destroy()
+end
+
+---UI Lib
+local Finity = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/UI-Librarys/main/Finity%20UI%20Lib"))()
+
+--WINDOW
+local FinityWindow = Finity.new(true)
+FinityWindow.ChangeToggleKey(Enum.KeyCode.F)
+--CATEGORY
+local FinityCategory = FinityWindow:Category("name")
+
+--SECTOR
+local FinitySector = FinityCategory:Sector("name")
+
+--THINGS
+local FinityCheat = FinitySector:Cheat("Checkbox", "name", function()
+end, {})
+
+local FinityCheat = FinitySector:Cheat("Dropdown", "name", function()
+    
+end, {options = {"A", "B", "C"}})
+
+local FinityCheat = FinitySector:Cheat("Slider", "name", function()
+end, {})
+
+local FinityCheat = FinitySector:Cheat("Textbox", "name", function()
+end, {})
+
+local FinityCheat = FinitySector:Cheat("Button", "name", function()
+end, {})
+
+local FinityCheat = FinitySector:Cheat("Keybind", "name", function()
+end, {})
+
+local FinityCheat = FinitySector:Cheat("Colorpicker", "name", function()
+end, {})
+
+local FinityCheat = FinitySector:Cheat("Label", "name", function()
+end, {})
+
+local FinityCheat = FinitySector:Cheat("Button", "Destroy GUI", function()
+        game.CoreGui["FinityUI"]:Destroy()
+end, {})
